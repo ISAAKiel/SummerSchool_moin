@@ -13,9 +13,10 @@ International experts will give introductory talks and use case on they reconstr
 
 We are happy to welcome:
 
-- [Emeritus Professor Ray Rivers, Imperial College London](https://www.imperial.ac.uk/people/r.rivers) who developed, together with Tim Evans and Carl Knappett, a comprehensive analytical approach to model and reconstruct (maritime) interaction networks ([check the numerous publications on his RG page](https://www.researchgate.net/profile/Ray_Rivers)
-- [Clara Filet, Sorbonne University Paris](https://www.researchgate.net/profile/Clara_Filet2) how uses a extended gravity model approach [example publication with references](https://www.researchgate.net/publication/316435193_An_Attempt_to_Estimate_the_Impact_of_the_Spread_of_Economic_Flows_on_Latenian_Urbanization1) to reconstruct spatial interactions that help to gain insights into economic flows and urbanization processes during LaTéne period.
-- ??
+- [Emeritus Professor Dr. Ray Rivers, Imperial College London](https://www.imperial.ac.uk/people/r.rivers) who developed, together with Tim Evans and Carl Knappett, a comprehensive analytical approach to model and reconstruct (maritime) interaction networks ([check the numerous publications on his RG page](https://www.researchgate.net/profile/Ray_Rivers)
+- [Clara Filet, Sorbonne University Paris](https://www.researchgate.net/profile/Clara_Filet2) who uses a extended gravity model approach [example publication with references](https://www.researchgate.net/publication/316435193_An_Attempt_to_Estimate_the_Impact_of_the_Spread_of_Economic_Flows_on_Latenian_Urbanization1) to reconstruct spatial interactions that help to gain insights into economic flows and urbanization processes during LaTéne period.
+- [Dr. Francesco Carrer, Newcastle University](https://www.ncl.ac.uk/hca/staff/profile/francescocarrer.html#background) who is an expert in analysing settlement patterns and Ethnoarchaeology.
+
 
 ## Developing a spatial interaction model
 
@@ -35,6 +36,14 @@ In addition to this, we will learn about and contribute to reproducible research
 
 - There are **no fees** to participate in event. However, since we want to have an intensive *work*shop atmosphere there are only limited seats available. First come, first serve.
 
+- The Summer School is organized by:
+    - [CRC 1266](http://www.sfb1266.uni-kiel.de/en)
+    - [Institute for Pre- and Protohistory at Kiel University](https://www.ufg.uni-kiel.de/en?set_language=en)
+    - [ISAAK](https://isaakiel.github.io)
+- and funded by:
+    - [International Center at Kiel University](https://www.international.uni-kiel.de/en?set_language=en)
+
+
 # How to apply?
 
 Everybody can enrol who already has some experiences with R and knows the basics of spatial analyses. 
@@ -45,6 +54,7 @@ If you want to participate, please write a (very short) Email to [Daniel](knitte
 - What is your level of expertise (in your subject and in R)?
 - What is the current project you are working on?
 - At which institution are you hosted?
-- Do you already published on the suject "interaction"?
+- What is your status (ranging from student to postdoc)?
+- Do you already published on the subject "interaction"?
 
-We, i.e. [Oliver Nakoinz](https://www.researchgate.net/profile/Oliver_Nakoinz), [Martin Hinz](http://martinhinz.info/) and [Daniel Knitter](https://www.researchgate.net/profile/Daniel_Knitter), are looking forward to your application and hope to see you this summer in Kiel!
+We, i.e. [Oliver Nakoinz](http://oliver.nakoinz.gitlab.io/OliverNakoinz/), [Martin Hinz](http://martinhinz.info/) and [Daniel Knitter](https://www.researchgate.net/profile/Daniel_Knitter), are looking forward to your application and hope to see you this summer in Kiel!
