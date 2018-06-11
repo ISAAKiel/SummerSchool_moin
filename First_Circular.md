@@ -1,7 +1,19 @@
 ---
 title: Invitation to the International Summer school on Modelling Interation in Landscape Archaeology
-date: 2018-05-10, Kiel
+date: 2018-06-10, Kiel
 ---
+
+<!-- 
+pandoc -s -f markdown -t latex /home/fon/daten/lehre/SummerSchool/ss2018_kiel_moin/github/First_Circular.md -o  /home/fon/daten/lehre/SummerSchool/ss2018_kiel_moin/github/First_Circular.pdf --latex-engine=xelatex
+ --> 
+
+# Moin Summer School
+
+- Venue: Leibniz-Straße 1, Room 205, University of Kiel
+- Date: August, 20-24th, 2018
+- Topic: Developing an R Package for network modelling
+- Target group: Ranging from students to postdocs
+
 
 # What is it about?
 
@@ -58,3 +70,43 @@ If you want to participate, please write a (very short) Email to [Daniel](knitte
 - Do you already published on the subject "interaction"?
 
 We, i.e. [Oliver Nakoinz](http://oliver.nakoinz.gitlab.io/OliverNakoinz/), [Martin Hinz](http://martinhinz.info/) and [Daniel Knitter](https://www.researchgate.net/profile/Daniel_Knitter), are looking forward to your application and hope to see you this summer in Kiel!
+
+
+# Moin Program
+
+- Monday, August 20
+    - 09:00-10:00 Lecture: Oliver Nakoinz, Modelling Interaction
+    - 10:00-10:30 Introduction of the participants, defining working groups
+    - 10:30-12:30 Lecture: Daniel Knitter, Introduction to package development with R
+    - 12:30-13:30 Lunch
+    - 13:30-16:00 Coding in groups
+    - 16:00-17:00 Report of the working groups and discussion
+- Tuesday, August 21
+    - 09:00-10:30 Lecture: Ray Rivers, Trip Distribution Models 
+    - 10:30-12:00 Lecture: Clara Filet, Archaeology of Trip Distribution Models
+    - 12:00-13:30 Lunch
+    - 13:30-16:00 Coding in groups
+    - 16:00-17:00 Report of the working groups and discussion
+    - 19:00 Evening at Traumfabrik
+- Wednesday, August 22
+    - 09:00-10:00 Lecture: Oliver Nakoinz, Cultural Distance for weighting Networks
+    - 10:00-12:30 Coding in groups
+    - 12:30-13:30 Lunch
+    - 13:30-16:00 Coding in groups
+    - 16:00-17:00 Report of the working groups and discussion
+- Thurdsay, August 23
+    - 09:00-10:00 Lecture: Oliver Nakoinz, Cultural Distance for weighting Networks
+    - 10:00-12:30 Coding in groups
+    - 12:30-13:30 Lunch
+    - 13:30-15:00 Coding in groups
+    - 15:00-16:00 Lecture: Francesco Carrer, Testing with Point Pattern Analysis
+    - 16:00-17:00 Report of the working groups and discussion
+    - 18:00 Barbecue at Falkensteiner Strand
+- Friday, August 24
+    - 09:00-12:30 Coding in groups
+    - 12:30-13:30 Lunch
+    - 13:30-14:00 Report of the working groups and discussion
+    - 14:00-15:00 Talk: Martin Hinz, Summing Up
+    - 15:00-16:00 Discussion: Evaluation and Further steps 
+    - 16:00 Farewell
+
