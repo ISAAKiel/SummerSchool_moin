@@ -1,10 +1,10 @@
 ---
-title: Invitation to the International Summer school on Modelling Interation in Landscape Archaeology
+title: Invitation to the International Summer School on Modelling Interaction in Landscape Archaeology
 date: 2018-06-10, Kiel
 ---
 
 <!-- 
-pandoc -s -f markdown -t latex /home/fon/daten/lehre/SummerSchool/ss2018_kiel_moin/github/First_Circular.md -o  /home/fon/daten/lehre/SummerSchool/ss2018_kiel_moin/github/First_Circular.pdf --latex-engine=xelatex
+pandoc -s -f markdown -t latex /home/fon/daten/lehre/SummerSchool/ss2018_kiel_moin/github/First_Circular_Moin.md -o  /home/fon/daten/lehre/SummerSchool/ss2018_kiel_moin/github/First_Circular_Moin.pdf --latex-engine=xelatex
  --> 
 
 # Moin Summer School
