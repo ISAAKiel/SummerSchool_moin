@@ -1,7 +1,7 @@
 | Name              | Email                         | Institution                                                                 | Comment                              |
 |-------------------+-------------------------------+-----------------------------------------------------------------------------+--------------------------------------|
-| Benedikt Grammer  | benedikt.grammer@univie.ac.at | Department for Prehistoric and Historical Archaeology, University of Vienna |                                      |
+| Benedikt Grammer  | benedikt.grammer@univie.ac.at | University of Vienna, Department for Prehistoric and Historical Archaeology |                                      |
 | Kai Radloff       | kai.radloff@hu-berlin.de      | Berlin Graduate School of Ancient Studies, Humboldt-Universität zu Berlin   |                                      |
 | Georg Roth        | g.roth@fu-berlin.de           | Freie Universität Berlin, Prehistoric Institute                             |                                      |
 | Martin Riesenberg | martin.riesenberg@yahoo.de    | Freie Universität Berlin, Prehistoric Institute                             | potentially conflicting appointment; |
-|                   |                               |                                                                             |                                      |
+| Hendrik Raese     | h.raese@ufg.uni-kiel.de       | CAU Kiel, Institute for Pre- and Protohistory                               |                                      |
