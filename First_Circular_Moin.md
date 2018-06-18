@@ -38,7 +38,7 @@ Together with you we want to create a package for the open-source software envir
 - can be used by any researcher aiming to investigate spatial interactions;
 - enables comparisons between different studies and due to this allows us to investigate the very nature of interactions and flows in landscape archaeology.
 
-In addition to this, we will learn about and contribute to reproducible research, a field that gains continuously more importance and will change the practice of planning, conducting, and publishing scientific results in the not too far future [see e.g. this example by Ben Mariwck, one of the leading archaeologists in this debate](https://www.practicereproducibleresearch.org/case-studies/benmarwick.html). 
+In addition to this, we will learn about and contribute to reproducible research, a field that gains continuously more importance and will change the practice of planning, conducting, and publishing scientific results in the not too far future [see e.g. this example by Ben Marwick, one of the leading archaeologists in this debate](https://www.practicereproducibleresearch.org/case-studies/benmarwick.html). 
 
 # Dates and Fees
 
@@ -67,7 +67,7 @@ If you want to participate, please write a (very short) Email to [Daniel](knitte
 - What is the current project you are working on?
 - At which institution are you hosted?
 - What is your status (ranging from student to postdoc)?
-- Do you already published on the subject "interaction"?
+- Have you already published on the subject "interaction"?
 
 We, i.e. [Oliver Nakoinz](http://oliver.nakoinz.gitlab.io/OliverNakoinz/), [Martin Hinz](http://martinhinz.info/) and [Daniel Knitter](https://www.researchgate.net/profile/Daniel_Knitter), are looking forward to your application and hope to see you this summer in Kiel!
 
