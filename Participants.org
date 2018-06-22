@@ -7,3 +7,6 @@
 | 5 | Hendrik Raese     | h.raese@ufg.uni-kiel.de       | CAU Kiel, Institute of Prehistoric and Protohistoric Archaeology            |                                      |
 | 6 | Carolin Tietze    | ctietze1991@yahoo.com         | CAU Kiel, Institute of Classical Archaeology                                |                                      |
 | 7 | Chiara Girotto    | chiara.girotto@web.de         | Goethe University Frankfurt, LOEWE project                                  |                                      |
+| 8 | Michael Bilger    | sofnod@googlemail.com         | CAU Kiel, Institute of Prehistoric and Protohistoric Archaeology            |                                      |
+| 9 | Joe Roe           | jwg983@hum.ku.dk              | UCL & Copenhagen University                                                 |                                      |
+|   |                   |                               |                                                                             |                                      |
