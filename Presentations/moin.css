@@ -1,0 +1,150 @@
+/* based upon:
+- https://github.com/pat-s/xaringan-metropolis/blob/master/mtheme.css
+*/
+
+.remark-slide-content {
+    background-color: #FAFAFA;
+    border-top: 80px solid #8419d6;  
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 1.5;
+    padding: 1em 2em 1em 2em
+}
+
+div.my-header {
+    /* to make this work, add the following at the top of your Rmd document, directly after the YAML header:
+         layout: true
+         <div class="my-header"></div>
+   */
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url("ISAAK-logo.svg");    
+    position: fixed;    
+    top: 2%;
+    left: 95%;
+    height: 50px;
+    width: 100%;    
+}
+
+.title-slide {
+    background-repeat: no-repeat;    
+    background-image: url("ISAAK-logo.svg");
+    background-position: 80% 50%;
+}
+
+.title-slide .inverse .remark-slide-content {    
+    background-color: #FAFAFA;
+}
+
+.inverse {
+    background-color: #8419d6;
+    text-shadow: none;    
+}
+
+.remark-slide-content > h1 {
+    font-family: 'Source Sans Pro';
+    font-weight: normal;
+    font-size: 45px;
+    margin-top: -95px;
+    margin-left: -00px;
+    color: #FAFAFA;
+}
+
+.remark-slide-content > inverse {
+    width: 112px;
+    height: 47px;
+    border-bottom: 1px solid black;
+    position: absolute;
+}
+
+/* Removes colored bar from top of the slide resulting in a clear slide */
+.clear{
+    border-top: 0px solid #FAFAFA;
+}
+
+/* turns off slide numbers for title page: https://github.com/gnab/remark/issues/298 */
+.title-slide .remark-slide-number {
+    display: none;
+}
+
+.remark-slide-number {
+    font-size: 11pt;
+    font-family: 'Source Sans Pro';
+    color: #272822;
+    opacity: 1;
+}
+.inverse .remark-slide-number {
+    font-size: 11pt;
+    font-family: 'Source Sans Pro';
+    color: #FAFAFA;
+    opacity: 1;
+}
+
+.remark-slide-content > h2, h3, h4 {
+    padding-top: -15px;
+    padding-bottom: 00px;
+    color: #1A292C;
+    text-shadow: none;
+    font-weight: 400;
+    text-align: left;
+    margin-left: 00px;
+    margin-bottom: -10px;
+}
+
+.remark-slide-content > h2, .pull-left > h2, .pull-right > h2 {
+    font-size: 35px;
+}
+
+.remark-slide-content > h3, .remark-slide-content > h4,
+.pull-left > h3, .pull-left > h4, .pull-right > h3, .pull-right > h4 {
+    font-size: 30px;
+}
+
+.title-slide > h1  {
+    color: #ffffff;
+    font-size: 40px;
+    text-shadow: none;
+    font-weight: 400;
+    text-align: left;
+    margin-left: 15px;
+    padding-top: 80px;
+}
+.title-slide > h2  {
+    margin-top: -25px;
+    padding-bottom: -20px;
+    color: #ffffff;
+    text-shadow: none;
+    font-weight: 300;
+    font-size: 35px;
+    text-align: left;
+    margin-left: 15px;
+}
+.title-slide > h3  {
+    color: #ffffff;
+    text-shadow: none;
+    font-weight: 300;
+    font-size: 25px;
+    text-align: left;
+    margin-left: 15px;
+    margin-bottom: -30px;
+}
+
+.remark-inline-code {
+  /* background: #F5F5F5; /* lighter */
+  background: #e7e8e2; /* darker */
+  border-radius: 3px;
+  padding: 4px;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.underline {
+    text-decoration: underline;
+}
+
+.reference {
+    font-size: 60%;
+    line-height: normal;
+}

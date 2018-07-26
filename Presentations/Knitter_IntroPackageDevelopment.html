@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Introduction to Package Development in R</title>
+    <meta charset="utf-8">
+    <meta name="author" content="CRC1266 | A2 | Daniel Knitter" />
+    <meta name="date" content="2018-08-21" />
+    <link href="libs/remark-css-0.0.1/default.css" rel="stylesheet" />
+    <link rel="stylesheet" href="moin.css" type="text/css" />
+    <link rel="stylesheet" href="moin_fonts.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+# Introduction to Package Development in R
+## Summer School moin
+### CRC1266 | A2 | Daniel Knitter
+### 2018-08-21
+
+---
+
+layout: true
+&lt;div class="my-header"&gt;&lt;/div&gt;
+
+---
+
+# Introduction
+
+Why do we want to develop a package? 
+--
+Because it helps us to conduct .underline[reproducible research].
+
+.center[![:scale 80%](figures/Marwick-2017_426_Workflow-Computational-Reproducibility.png)]
+
+
+.reference[Marwick, B., 2017. Computational Reproducibility in
+Archaeological Research: Basic Principles and a Case Study of Their
+Implementation. Journal of Archaeological Method and Theory 24,
+424–450. https://doi.org/10.1007/s10816-015-9272-9]
+
+
+
+---
+
+# Packages...?!
+
+- A package is the fundamental unit of shareable code. It bundles together code, data, documentation, and tests.
+--
+
+- There are .bold[a lot] of R packages out there (as of 2018-07-26 there are 12784 packages available in the CRAN repository)
+--
+
+- Thanks to the `devtools` package it is easy to create and share your package with others.
+--
+
+- Great .bold[references] to start are: 
+  - Wickham, H., 2015. R Packages: Organize, Test, Document, and Share Your Code, 1 edition. ed. O’Reilly Media, Sebastopol, CA.
+  - A minimal but rather comprehensive tutorial: https://kbroman.org/pkg_primer/
+  - Writing R Extensions ([link](https://cran.r-project.org/doc/manuals/r-release/R-exts.html))
+  - Writing an R package from scratch ([link](https://hilaryparker.com/2014/04/29/writing-an-r-package-from-scratch/))
+
+
+---
+
+# Why a package?
+
+- turn your long, individualized script into general functions
+--
+
+- reproducible
+--
+
+- easy to distribute
+--
+
+- cross-platform (since R is cross-platform)
+--
+
+- documentation
+
+---
+
+# Learning by doing: Create empty package
+
+Let's use `devtools` to create our `moin` package
+
+
+
+
+```r
+library(devtools)
+devtools::create(path = "./moin")
+```
+
+```
+## Creating package 'moin' in '/home/daniel/ISAAK/2018_SummerSchool_moin/Presentations'
+```
+
+```
+## No DESCRIPTION found. Creating with values:
+```
+
+```
+## Package: moin
+## Title: What the Package Does (one line, title case)
+## Version: 0.0.0.9000
+## Authors@R: person("First", "Last", email = "first.last@example.com", role = c("aut", "cre"))
+## Description: What the package does (one paragraph).
+## Depends: R (&gt;= 3.5.1)
+## License: What license is it under?
+## Encoding: UTF-8
+## LazyData: true
+```
+
+```
+## * Creating `moin.Rproj` from template.
+```
+
+```
+## * Adding `.Rproj.user`, `.Rhistory`, `.RData` to ./.gitignore
+```
+
+---
+
+# Learning by doing: Edit Description
+
+The metadata of your package are stored in the `DESCRIPTION` file. `devtools::create("mypackage")` already added a bare-bones description file that we can edit manually or using some handy functions from the `devtools` package
+
+--
+
+.pull-left[
+...we can use a function to create a license for our package
+
+
+```r
+devtools::use_gpl3_license(pkg = "./moin")
+```
+
+```
+## * Updating license field in DESCRIPTION.
+```
+
+```
+## * Creating `LICENSE` from template.
+```
+]
+
+--
+
+.pull-right[
+
+```
+Package: moin
+Title: What the Package Does (one line, title case)
+Version: 0.0.0.9000
+Authors@R: person("First", "Last", email = "first.last@example.com", role = c("aut", "cre"))
+Description: What the package does (one paragraph).
+Depends: R (&gt;= 3.5.1)
+License: GPL-3 + file LICENSE
+Encoding: UTF-8
+LazyData: true
+```
+]
+
+--
+
+Which license to chose? Research and decide yourself
+- https://choosealicense.com/
+- Morin, A., Urban, J., Sliz, P., 2012. A Quick Guide to Software Licensing for the Scientist-Programmer. PLOS Computational Biology 8, e1002598. https://doi.org/10.1371/journal.pcbi.1002598
+- general advice by Karl Broman: http://kbroman.org/pkg_primer/pages/licenses.html
+
+
+???
+
+- [informal advice](https://blog.codinghorror.com/pick-a-license-any-license/): "I hate software licenses. When I read a software license, what I see is a bunch of officious, mind-numbing lawyerly doublespeak. Blah, blah, blah.. kill me now." 
+
+---
+
+# Learning by doing: Edit Description
+
+My `DESCRIPTION` file after manually adding further information
+
+
+
+
+```
+Package: moin
+Title: Modelling Spatial Interactions in R
+Version: 0.0.0.9000
+Authors@R: c(
+  "person("Daniel", "Knitter", email = "knitter@geographie.uni-kiel.de", role = c("aut","cre"))")
+Description: This package provides functions to calculate simple location and interaction models. It is based on the gravity and entropy maximization approaches. These can be defined within the deterrence (or cost) functions. Two functions are implmented, covered singly- as well as doubly-constrained models.
+Depends: R (&gt;= 3.5.1)
+License: GPL-3 + file LICENSE
+Encoding: UTF-8
+LazyData: true
+```
+---
+
+# Learning by doing: Package dependencies
+
+If you need functions from other packages you need to mention it in the `DESCRIPTION` file. We can use `devtools` to take care of this edit
+
+--
+
+.pull-left[
+Code to run:
+
+
+```r
+devtools::use_package(package = "sf",
+                      type = "Imports",
+                      pkg = "./moin")
+```
+
+```
+## * Adding sf to Imports
+```
+
+```
+## Next:
+```
+
+```
+## Refer to functions with sf::fun()
+```
+]
+
+--
+
+.pull-right[
+Resulting description file:
+
+
+```
+Package: moin
+Title: Modelling Spatial Interactions in R
+Version: 0.0.0.9000
+Authors@R: c(
+  "person("Daniel", "Knitter", email = "knitter@geographie.uni-kiel.de", role = c("aut","cre"))")
+Description: This package provides functions to calculate simple location and interaction models. It is based on the gravity and entropy maximization approaches. These can be defined within the deterrence (or cost) functions. Two functions are implmented, covered singly- as well as doubly-constrained models.
+Depends: R (&gt;= 3.5.1)
+License: GPL-3 + file LICENSE
+Encoding: UTF-8
+LazyData: true
+Imports: sf
+```
+]
+
+Further infos: http://r-pkgs.had.co.nz/description.html#dependencies
+
+---
+
+# Learning by doing: Add some R code and document it
+
+R-code is stored in the `R` folder under your package directory. Let's create a `hello-world.R` file where we create a simple function and document it in place.
+
+
+```r
+hello_function &lt;- function(name) {
+  print(paste0("Hello, ", name, "!"))
+  }
+```
+
+--
+
+Now, let's add the documentation
+
+
+```r
+##' .. content for \description{} (no empty lines) ..
+##'
+##' .. content for \details{} ..
+##' @title hello_function
+##' @param name 
+##' @example hello_function(name = "daniel")
+##' @return 
+hello_function &lt;- function(name) {
+  print(paste0("Hello, ", name, "!"))
+  }
+```
+    </textarea>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script src="moin_macros.js"></script>
+<script>var slideshow = remark.create({
+"ratio": "16:9",
+"highlightStyle": "monokai",
+"highlightLines": true,
+"countIncrementalSlides": false
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function() {
+  var d = document, s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})();</script>
+
+<script>
+(function() {
+  var i, text, code, codes = document.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+})();
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>

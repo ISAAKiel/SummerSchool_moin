@@ -1,0 +1,11 @@
+Package: moin
+Title: Modelling Spatial Interactions in R
+Version: 0.0.0.9000
+Authors@R: c(
+  "person("Daniel", "Knitter", email = "knitter@geographie.uni-kiel.de", role = c("aut","cre"))")
+Description: This package provides functions to calculate simple location and interaction models. It is based on the gravity and entropy maximization approaches. These can be defined within the deterrence (or cost) functions. Two functions are implmented, covered singly- as well as doubly-constrained models.
+Depends: R (>= 3.5.1)
+License: GPL-3 + file LICENSE
+Encoding: UTF-8
+LazyData: true
+Imports: sf
