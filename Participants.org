@@ -1,13 +1,14 @@
-| # | Name                    | Email                         | Institution                                                                 | Comment                              |
-|---+-------------------------+-------------------------------+-----------------------------------------------------------------------------+--------------------------------------|
-| 1 | Benedikt Grammer        | benedikt.grammer@univie.ac.at | University of Vienna, Department for Prehistoric and Historical Archaeology |                                      |
-| 2 | Kai Radloff             | kai.radloff@hu-berlin.de      | Berlin Graduate School of Ancient Studies, Humboldt-Universität zu Berlin   |                                      |
-| 3 | Georg Roth              | g.roth@fu-berlin.de           | Freie Universität Berlin, Prehistoric Institute                             |                                      |
-| 4 | Hendrik Raese           | h.raese@ufg.uni-kiel.de       | CAU Kiel, Institute of Prehistoric and Protohistoric Archaeology            |                                      |
-| 5 | Carolin Tietze          | ctietze1991@yahoo.com         | CAU Kiel, Institute of Classical Archaeology                                |                                      |
-| 6 | Chiara Girotto          | chiara.girotto@web.de         | Goethe University Frankfurt, LOEWE project                                  |                                      |
-| 7 | Michael Bilger          | sofnod@googlemail.com         | CAU Kiel, Institute of Prehistoric and Protohistoric Archaeology            |                                      |
-| 8 | Joe Roe                 | jwg983@hum.ku.dk              | UCL & Copenhagen University                                                 |                                      |
-| 9 | Juliane Watson (Bonneß) | juliane.bonness@dainst.de     | Deutsches Archäologisches Institut, IT                                      |                                      |
-|---+-------------------------+-------------------------------+-----------------------------------------------------------------------------+--------------------------------------|
-| x | Martin Riesenberg       | martin.riesenberg@yahoo.de    | Freie Universität Berlin, Prehistoric Institute                             | potentially conflicting appointment; |
+|  # | Name                    | Email                         | Institution                                                                 | Comment                              |
+|----+-------------------------+-------------------------------+-----------------------------------------------------------------------------+--------------------------------------|
+|  1 | Benedikt Grammer        | benedikt.grammer@univie.ac.at | University of Vienna, Department for Prehistoric and Historical Archaeology |                                      |
+|  2 | Kai Radloff             | kai.radloff@hu-berlin.de      | Berlin Graduate School of Ancient Studies, Humboldt-Universität zu Berlin   |                                      |
+|  3 | Georg Roth              | g.roth@fu-berlin.de           | Freie Universität Berlin, Prehistoric Institute                             |                                      |
+|  4 | Hendrik Raese           | h.raese@ufg.uni-kiel.de       | CAU Kiel, Institute of Prehistoric and Protohistoric Archaeology            |                                      |
+|  5 | Carolin Tietze          | ctietze1991@yahoo.com         | CAU Kiel, Institute of Classical Archaeology                                |                                      |
+|  6 | Chiara Girotto          | chiara.girotto@web.de         | Goethe University Frankfurt, LOEWE project                                  |                                      |
+|  7 | Michael Bilger          | sofnod@googlemail.com         | CAU Kiel, Institute of Prehistoric and Protohistoric Archaeology            |                                      |
+|  8 | Joe Roe                 | jwg983@hum.ku.dk              | UCL & Copenhagen University                                                 |                                      |
+|  9 | Juliane Watson (Bonneß) | juliane.bonness@dainst.de     | Deutsches Archäologisches Institut, IT                                      |                                      |
+| 10 | Franziska Faupel        | franziska-faupel@gmx.de       | CAU Kiel, Institute of Prehistoric and Protohistoric Archaeology            |                                      |
+|----+-------------------------+-------------------------------+-----------------------------------------------------------------------------+--------------------------------------|
+|  x | Martin Riesenberg       | martin.riesenberg@yahoo.de    | Freie Universität Berlin, Prehistoric Institute                             | potentially conflicting appointment; |
