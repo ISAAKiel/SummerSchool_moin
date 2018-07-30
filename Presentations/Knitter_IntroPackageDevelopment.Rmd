@@ -19,25 +19,7 @@ layout: true
 
 ---
 
-# Introduction
-
-Why do we want to develop a package? 
---
-Because it helps us to conduct .underline[reproducible research].
-
-.center[![:scale 80%](figures/Marwick-2017_426_Workflow-Computational-Reproducibility.png)]
-
-
-.reference[Marwick, B., 2017. Computational Reproducibility in
-Archaeological Research: Basic Principles and a Case Study of Their
-Implementation. Journal of Archaeological Method and Theory 24,
-424–450. https://doi.org/10.1007/s10816-015-9272-9]
-
-
-
----
-
-# Packages...?!
+# Introduction: Packages...?!
 
 - A package is the fundamental unit of shareable code. It bundles together code, data, documentation, and tests.
 --
@@ -57,7 +39,11 @@ Implementation. Journal of Archaeological Method and Theory 24,
 
 ---
 
-# Why a package?
+
+# Introduction
+
+Why do we want to develop a package? 
+--
 
 - turn your long, individualized script into general functions
 --
@@ -75,7 +61,52 @@ Implementation. Journal of Archaeological Method and Theory 24,
 
 ---
 
-# Learning by doing: Create empty package
+# Introduction
+
+Why do we want to develop a package? 
+
+.bold[Because it helps us to conduct .underline[reproducible research].]
+
+.center[![:scale 80%](figures/Marwick-2017_426_Workflow-Computational-Reproducibility.png)]
+
+
+.reference[Marwick, B., 2017. Computational Reproducibility in
+Archaeological Research: Basic Principles and a Case Study of Their
+Implementation. Journal of Archaeological Method and Theory 24,
+424–450. https://doi.org/10.1007/s10816-015-9272-9]
+
+---
+
+# Introduction
+
+General structure of a package
+
+```
+PackageName/
+├─DESCRIPTION
+├─INDEX
+├─NAMESPACE
+├─R/
+├─data/
+├─demo/
+├─exec/
+├─inst/
+├─man/
+├─src/
+└─tests/
+```
+
+Further infos:
+- Section in Writing R Extentsion ([link](https://cran.r-project.org/doc/manuals/r-release/R-exts.html#Package-structure))
+- Screenshot tutorial with futher links ([link](http://www.mjdenny.com/R_Package_Pictorial.html))
+- Ligges, U., 2008. Programmieren mit R, Springer, Berlin. (p 199ff.)
+
+
+---
+
+# DiY: Create empty package
+
+--
 
 Let's use `devtools` to create our `moin` package
 
@@ -85,16 +116,24 @@ if (dir.exists("moin")) {
 }
 ```
 
-```{r}
+```{r, eval=FALSE}
+library(devtools)
+devtools::create(path = "./moin")
+```
+--
+
+```{r, echo=FALSE}
 library(devtools)
 devtools::create(path = "./moin")
 ```
 
 ---
 
-# Learning by doing: Edit Description
+# DiY: Edit Description -- License
 
-The metadata of your package are stored in the `DESCRIPTION` file. `devtools::create("mypackage")` already added a bare-bones description file that we can edit manually or using some handy functions from the `devtools` package
+The metadata of your package are stored in the `DESCRIPTION` file.
+
+`devtools::create("mypackage")` already added a bare-bones description file that we can edit manually or using some handy functions from the `devtools` package
 
 --
 
@@ -128,7 +167,7 @@ Which license to chose? Research and decide yourself
 
 ---
 
-# Learning by doing: Edit Description
+# DiY: Edit Description -- Author, etc.
 
 My `DESCRIPTION` file after manually adding further information
 
@@ -152,10 +191,11 @@ cat moin/DESCRIPTION
 ```
 ---
 
-# Learning by doing: Package dependencies
+# DiY: Package dependencies
 
-If you need functions from other packages you need to mention it in the `DESCRIPTION` file. We can use `devtools` to take care of this edit
+If you use functions from other packages you need to inform the users (or rather their computers) about it. This is done by mentioning the relevant packages/functions in the `DESCRIPTION` file. 
 
+We can use `devtools` to take care of this edit ([further infos](http://r-pkgs.had.co.nz/description.html#dependencies))
 --
 
 .pull-left[
@@ -178,11 +218,12 @@ cat moin/DESCRIPTION
 ```
 ]
 
-Further infos: http://r-pkgs.had.co.nz/description.html#dependencies
+- Now we can use functions from the `sf` package by calling: `sf::fun()`
+- Note the difference between `Import` and `Suggest`
 
 ---
 
-# Learning by doing: Add some R code and document it
+# DiY: Add some R code and document it
 
 R-code is stored in the `R` folder under your package directory. Let's create a `hello-world.R` file where we create a simple function and document it in place.
 
