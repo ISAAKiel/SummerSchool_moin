@@ -17,6 +17,11 @@ output:
 layout: true
 <div class="my-header"></div>
 
+```{r setup, include=FALSE}
+system(command = "rm -r moin")
+```
+
+
 ---
 
 # Introduction: Packages...?!
@@ -175,11 +180,17 @@ My `DESCRIPTION` file after manually adding further information
 writeLines(c(
 'Package: moin',
 'Title: Modelling Spatial Interactions in R',
+'Description: This package provides functions to calculate simple
+    location and interaction models. It is based on the gravity and
+    entropy maximization approaches. These can be defined within the
+    deterrence (or cost) functions. Two functions are implmented,
+    covered singly- as well as doubly-constrained models.',
 'Version: 0.0.0.9000',
 'Authors@R: c(
-  "person("Daniel", "Knitter", email = "knitter@geographie.uni-kiel.de", role = c("aut","cre"))")',
-'Description: This package provides functions to calculate simple location and interaction models. It is based on the gravity and entropy maximization approaches. These can be defined within the deterrence (or cost) functions. Two functions are implmented, covered singly- as well as doubly-constrained models.',
-'Depends: R (>= 3.5.1)',
+  person("Daniel", "Knitter", email = "knitter@geographie.uni-kiel.de", role = c("aut","cre")))',
+'URL: HOMEPAGE TO BE AVAILABLE SOON',
+'BugReports: https://github.com/ISAAKiel/moin/issues',
+'Depends: R (>= 3.5)',
 'License: GPL-3 + file LICENSE',
 'Encoding: UTF-8',
 'LazyData: true'), 'moin/DESCRIPTION')
@@ -193,9 +204,7 @@ cat moin/DESCRIPTION
 
 # DiY: Package dependencies
 
-If you use functions from other packages you need to inform the users (or rather their computers) about it. This is done by mentioning the relevant packages/functions in the `DESCRIPTION` file. 
-
-We can use `devtools` to take care of this edit ([further infos](http://r-pkgs.had.co.nz/description.html#dependencies))
+If you use functions from other packages you need to inform the users (or rather their computers) about it. This is done by mentioning the relevant packages/functions in the `DESCRIPTION` file. We can use `devtools` to take care of this edit ([further infos](http://r-pkgs.had.co.nz/description.html#dependencies))
 --
 
 .pull-left[
@@ -227,7 +236,7 @@ cat moin/DESCRIPTION
 
 R-code is stored in the `R` folder under your package directory. Let's create a `hello-world.R` file where we create a simple function and document it in place.
 
-```{r exampleCode}
+```{r exampleCode, eval = FALSE}
 hello_function <- function(name) {
   print(paste0("Hello, ", name, "!"))
   }
@@ -235,17 +244,74 @@ hello_function <- function(name) {
 
 --
 
-Now, let's add the documentation
+Now, let's add the documentation using `roxygen` comments `#'`
 
-```{r exampleCodedocu}
+```{r exampleCodedocu, eval = FALSE}
 ##' .. content for \description{} (no empty lines) ..
 ##'
 ##' .. content for \details{} ..
 ##' @title hello_function
-##' @param name 
-##' @example hello_function(name = "daniel")
-##' @return 
+##' @param name a name
+##' @return a greeting
+##' @example hello_function(name = "World")
+##' @export
 hello_function <- function(name) {
   print(paste0("Hello, ", name, "!"))
   }
 ```
+
+```{r echo=FALSE}
+writeLines(c("##' room for the DESCRIPTION
+##'
+##' and more DETAILS
+##' @title hello_function
+##' @param name a name##' 
+##' @return a greeting
+##' @export
+hello_function <- function(name) {
+  print(paste0('Hello, ', name, '!'))
+  }"), "moin/R/hello_function.R")
+close(file('moin/R/hello_function.R'))
+```
+
+
+---
+
+# DiY: Add some R code and document it
+
+```{r testdic1}
+devtools::document(pkg = "./moin") #  calls roxygen2::roxygenise() to do the hard work
+```
+
+Use `?` or `help()` to adjust your documentation until you like it. 
+
+Please check in your package folder: `man/` as well as `NAMESPACE`
+
+further infos:
+
+- [Object documentation from Hadley](http://r-pkgs.had.co.nz/man.html)
+- [field description in roxygen2](https://cran.r-project.org/web/packages/roxygen2/vignettes/rd.html)
+- [roxygen2 in general](https://cran.r-project.org/web/packages/roxygen2/vignettes/roxygen2.html)
+- [the "old" Rd format](https://cran.r-project.org/doc/manuals/r-release/R-exts.html#Writing-R-documentation-files)
+
+---
+
+# DiY: Install the package
+
+Let's install the package
+
+```{r testdic2}
+devtools::install(pkg = "./moin") #  calls roxygen2::roxygenise() to do the hard work
+```
+
+- `devtools::install`: Uses `R CMD INSTALL` to install the package.  Will also try to install dependencies of the package from CRAN, if they’re not already installed
+- `devtools::build`: Building converts a package source directory into a single bundled file. By default creates a `tar.gz` package that can be installed.
+
+---
+
+
+# Our goal
+
+Arrive at version 1.0.0 [no pressure ;) ]
+
+By the way, infos on how to version your package are given e.g. here: [link](http://r-pkgs.had.co.nz/description.html#version)

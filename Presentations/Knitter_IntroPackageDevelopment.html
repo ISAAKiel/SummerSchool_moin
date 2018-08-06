@@ -23,6 +23,9 @@ class: center, middle, inverse, title-slide
 layout: true
 &lt;div class="my-header"&gt;&lt;/div&gt;
 
+
+
+
 ---
 
 # Introduction: Packages...?!
@@ -103,8 +106,8 @@ PackageName/
 ```
 
 Further infos:
-- Section in Writing R Extentsion [link](https://cran.r-project.org/doc/manuals/r-release/R-exts.html#Package-structure)
-- Screenshot tutorial with futher links[link](http://www.mjdenny.com/R_Package_Pictorial.html)
+- Section in Writing R Extentsion ([link](https://cran.r-project.org/doc/manuals/r-release/R-exts.html#Package-structure))
+- Screenshot tutorial with futher links ([link](http://www.mjdenny.com/R_Package_Pictorial.html))
 - Ligges, U., 2008. Programmieren mit R, Springer, Berlin. (p 199ff.)
 
 
@@ -222,11 +225,17 @@ My `DESCRIPTION` file after manually adding further information
 ```
 Package: moin
 Title: Modelling Spatial Interactions in R
+Description: This package provides functions to calculate simple
+    location and interaction models. It is based on the gravity and
+    entropy maximization approaches. These can be defined within the
+    deterrence (or cost) functions. Two functions are implmented,
+    covered singly- as well as doubly-constrained models.
 Version: 0.0.0.9000
 Authors@R: c(
-  "person("Daniel", "Knitter", email = "knitter@geographie.uni-kiel.de", role = c("aut","cre"))")
-Description: This package provides functions to calculate simple location and interaction models. It is based on the gravity and entropy maximization approaches. These can be defined within the deterrence (or cost) functions. Two functions are implmented, covered singly- as well as doubly-constrained models.
-Depends: R (&gt;= 3.5.1)
+  person("Daniel", "Knitter", email = "knitter@geographie.uni-kiel.de", role = c("aut","cre")))
+URL: HOMEPAGE TO BE AVAILABLE SOON
+BugReports: https://github.com/ISAAKiel/moin/issues
+Depends: R (&gt;= 3.5)
 License: GPL-3 + file LICENSE
 Encoding: UTF-8
 LazyData: true
@@ -235,9 +244,7 @@ LazyData: true
 
 # DiY: Package dependencies
 
-If you use functions from other packages you need to inform the users (or rather their computers) about it. This is done by mentioning the relevant packages/functions in the `DESCRIPTION` file. 
-
-We can use `devtools` to take care of this edit ([further infos](http://r-pkgs.had.co.nz/description.html#dependencies))
+If you use functions from other packages you need to inform the users (or rather their computers) about it. This is done by mentioning the relevant packages/functions in the `DESCRIPTION` file. We can use `devtools` to take care of this edit ([further infos](http://r-pkgs.had.co.nz/description.html#dependencies))
 --
 
 .pull-left[
@@ -246,7 +253,7 @@ Code to run:
 
 ```r
 devtools::use_package(package = "sf",
-                      type = "Imports", # other Option "Suggests"
+                      type = "Imports",
                       pkg = "./moin")
 ```
 
@@ -272,11 +279,17 @@ Resulting description file:
 ```
 Package: moin
 Title: Modelling Spatial Interactions in R
+Description: This package provides functions to calculate simple
+    location and interaction models. It is based on the gravity and
+    entropy maximization approaches. These can be defined within the
+    deterrence (or cost) functions. Two functions are implmented,
+    covered singly- as well as doubly-constrained models.
 Version: 0.0.0.9000
 Authors@R: c(
-  "person("Daniel", "Knitter", email = "knitter@geographie.uni-kiel.de", role = c("aut","cre"))")
-Description: This package provides functions to calculate simple location and interaction models. It is based on the gravity and entropy maximization approaches. These can be defined within the deterrence (or cost) functions. Two functions are implmented, covered singly- as well as doubly-constrained models.
-Depends: R (&gt;= 3.5.1)
+  person("Daniel", "Knitter", email = "knitter@geographie.uni-kiel.de", role = c("aut","cre")))
+URL: HOMEPAGE TO BE AVAILABLE SOON
+BugReports: https://github.com/ISAAKiel/moin/issues
+Depends: R (&gt;= 3.5)
 License: GPL-3 + file LICENSE
 Encoding: UTF-8
 LazyData: true
@@ -284,7 +297,8 @@ Imports: sf
 ```
 ]
 
-Now we can use functions from the `sf` package by calling: `sf::fun()`
+- Now we can use functions from the `sf` package by calling: `sf::fun()`
+- Note the difference between `Import` and `Suggest`
 
 ---
 
@@ -301,7 +315,7 @@ hello_function &lt;- function(name) {
 
 --
 
-Now, let's add the documentation
+Now, let's add the documentation using `roxygen` comments `#'`
 
 
 ```r
@@ -309,13 +323,108 @@ Now, let's add the documentation
 ##'
 ##' .. content for \details{} ..
 ##' @title hello_function
-##' @param name 
-##' @example hello_function(name = "daniel")
-##' @return 
+##' @param name a name
+##' @return a greeting
+##' @example hello_function(name = "World")
+##' @export
 hello_function &lt;- function(name) {
   print(paste0("Hello, ", name, "!"))
   }
 ```
+
+
+
+
+---
+
+# DiY: Add some R code and document it
+
+
+```r
+devtools::document(pkg = "./moin") #  calls roxygen2::roxygenise() to do the hard work
+```
+
+```
+## Updating moin documentation
+```
+
+```
+## Loading moin
+```
+
+```
+## Updating roxygen version in /home/daniel/ISAAK/2018_SummerSchool_moin/Presentations/moin/DESCRIPTION
+```
+
+```
+## Writing NAMESPACE
+## Writing hello_function.Rd
+```
+
+Use `?` or `help()` to adjust your documentation until you like it. 
+
+Please check in your package folder: `man/` as well as `NAMESPACE`
+
+further infos:
+
+- [Object documentation from Hadley](http://r-pkgs.had.co.nz/man.html)
+- [field description in roxygen2](https://cran.r-project.org/web/packages/roxygen2/vignettes/rd.html)
+- [roxygen2 in general](https://cran.r-project.org/web/packages/roxygen2/vignettes/roxygen2.html)
+- [the "old" Rd format](https://cran.r-project.org/doc/manuals/r-release/R-exts.html#Writing-R-documentation-files)
+
+---
+
+# DiY: Install the package
+
+Let's install the package
+
+
+```r
+devtools::install(pkg = "./moin") #  calls roxygen2::roxygenise() to do the hard work
+```
+
+```
+## Installing moin
+```
+
+```
+## '/usr/lib64/R/bin/R' --no-site-file --no-environ --no-save --no-restore  \
+##   --quiet CMD INSTALL  \
+##   '/home/daniel/ISAAK/2018_SummerSchool_moin/Presentations/moin'  \
+##   --library='/home/daniel/R/x86_64-pc-linux-gnu-library/3.5'  \
+##   --install-tests
+```
+
+```
+## 
+```
+
+```
+## Reloading installed moin
+```
+
+```
+## 
+## Attaching package: 'moin'
+```
+
+```
+## The following object is masked _by_ '.GlobalEnv':
+## 
+##     hello_function
+```
+
+- `devtools::install`: Uses `R CMD INSTALL` to install the package.  Will also try to install dependencies of the package from CRAN, if they’re not already installed
+- `devtools::build`: Building converts a package source directory into a single bundled file. By default creates a `tar.gz` package that can be installed.
+
+---
+
+
+# Our goal
+
+Arrive at version 1.0.0 [no pressure ;) ]
+
+By the way, infos on how to version your package are given e.g. here: [link](http://r-pkgs.had.co.nz/description.html#version)
     </textarea>
 <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
 <script src="moin_macros.js"></script>
