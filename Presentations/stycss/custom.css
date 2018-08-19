@@ -1,0 +1,19 @@
+<style>
+.reveal h1, .reveal h2, .reveal h3 {
+  word-wrap: normal;
+  -moz-hyphens: none;
+}
+</style>
+
+<style>
+.reveal { font-size: 3em; }
+.reveal h1 { font-size: 2.5em;  font-weight: bold}
+.reveal h2 { font-size: 2.0em; }
+.reveal h3 { font-size: 1.8em; }
+.reveal h4 { font-size: 1em; }
+.reveal ul { font-size: 1em; }
+.reveal 0l { font-size: 1em; }
+.reveal .slideContent  { font-size: 1.0em; }
+.prompt .reveal  h3 { font-size: 1.8em; }
+.alert .reveal  h3 { font-size: 1.8em; }
+</style>

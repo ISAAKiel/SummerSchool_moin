@@ -1,0 +1,161 @@
+\ProvidesPackage{beamerthemefon02}
+
+\mode<presentation>
+
+
+
+
+
+    
+% % % % Inhaltsverzeichnis Helligkeit
+    \setbeamertemplate{section in toc shaded}[default][80]
+
+% % % % Block
+    \setbeamertemplate{blocks}[rounded][shadow=false] 
+    %\setbeamertemplate{blocks}[rounded][shadow=true] 
+
+% % % %  Item
+    %\setbeamertemplate{items}[circle] 
+    %\setbeamertemplate{items}[triangles] 
+
+% % % % Splaten
+    \setlength{\columnsep}{0.5cm}       % Abstand zwischen den Spalten
+
+% % % % Farben
+    %% Faben allgemein
+    %\definecolor{papier}{RGB}{237,227,117}
+    %\definecolor{papier}{RGB}{231,211,177}
+    \definecolor{papier}{RGB}{236,224,176}
+    \definecolor{krot}{RGB}{229,20,60}
+    \definecolor{hellblau}{RGB}{110,130,160}
+    \definecolor{dunkelblau}{RGB}{45,60,90}
+    \definecolor{grau100}{RGB}{100,100,100}
+    \definecolor{grau120}{RGB}{120,120,120}
+    \definecolor{grau130}{RGB}{140,140,140}
+    \definecolor{grau140}{RGB}{140,140,140}
+    \definecolor{grau150}{RGB}{140,140,140}
+    \definecolor{grau160}{RGB}{160,160,160}
+    \definecolor{grau170}{RGB}{170,170,170}
+    \definecolor{grau180}{RGB}{180,180,180}
+    \definecolor{grau200}{RGB}{200,200,200}
+    
+    % Standardfarbe:
+    \definecolor{beamer@blendedblue}{RGB}{45,60,90}
+    \usecolortheme[RGB={45,60,90}]{structure} 
+    \setbeamercolor{frametitle}{bg=}
+    \setbeamercolor{title}{bg=}
+    
+    %% äußere Farben:
+    \mode<presentation>
+        \setbeamercolor*{palette primary}{use=structure,fg=black,bg=grau150} % Titel und unten links
+        \setbeamercolor*{palette secondary}{use=structure,fg=black,bg=grau140} % oben rechts und unten rechts
+        \setbeamercolor*{palette tertiary}{use=structure,fg=black,bg=grau120}  % oben links
+        \setbeamercolor*{palette quaternary}{fg=white,bg=black}
+        \setbeamercolor*{palette sidebar secondary}{fg=white}
+        \setbeamercolor*{palette sidebar quaternary}{fg=white}
+        %\setbeamercolor*{titlelike}{parent=palette primary}
+        \setbeamercolor*{separation line}{}
+        \setbeamercolor*{fine separation line}{}
+        \setbeamercolor{item projected}{use=item,fg=dunkelblau,bg=item.fg!dunkelblau}
+    \mode
+    <all>
+    
+    %% Blockfarbe
+    \mode<presentation>
+        \setbeamercolor{block title}{use=structure,fg=white!30!hellblau,bg=black!50!hellblau}
+        \setbeamercolor{block title alerted}{use=red,fg=white,bg=alerted text.grau100!30!red}
+        \setbeamercolor{block title example}{use=grau100,fg=white,bg=grau100}
+        \setbeamercolor{block body}{use=papier,bg=grau100!10!papier}
+        \setbeamercolor{block body alerted}{use=papier,bg=grau100!10!papier}
+        \setbeamercolor{block body example}{use=papier,bg=grau100!10!papier}
+    \mode
+    <all>
+
+% % % % Leisten und Schalter
+    \beamertemplatenavigationsymbolsempty  % navigation ausschalten
+    \setbeamertemplate{headline}[infolines]
+    \setbeamertemplate{footline}[frame number]
+    %\setbeamerfont{headline}{family=\ttfamily} 
+    %\setbeamerfont{footline}{family=\ttfamily} 
+    %\setbeamerfont{page number in head/foot}{family=\ttfamily} 
+    \setbeamerfont{headline}{family=\sffamily} 
+    \setbeamerfont{footline}{family=\sffamily} 
+    \setbeamerfont{page number in head/foot}{family=\sffamily} 
+    %\fontfamily{\familydefault}
+    %\fontseries{\seriesdefault}
+    %% Kopfleiste
+    \defbeamertemplate*{headline}{infolines theme}
+    { \leavevmode%
+      \hbox{%
+      \begin{beamercolorbox}[wd=.7\paperwidth,ht=2.25ex,dp=1ex,left]{section in head/foot}%
+        \usebeamerfont{section in head/foot}%\insertsectionhead
+        \hspace*{2ex}
+        \insertshorttitle
+        %\inserttitle
+      \end{beamercolorbox}%
+      \begin{beamercolorbox}[wd=.3\paperwidth,ht=2.25ex,dp=1ex,right]{subsection in head/foot}%
+        \usebeamerfont{subsection in head/foot}\hspace*{2ex}%\insertsubsectionhead
+        \insertshortauthor
+        \hspace*{2ex}
+      \end{beamercolorbox}}%
+      \vskip0pt%
+    }
+
+    %% Fußleiste
+    %\defbeamertemplate*{footline}{infolines theme}
+    %{ \leavevmode%
+    %  \hbox{%
+    %  \begin{beamercolorbox}[wd=.8\paperwidth,ht=2.25ex,dp=1ex,center]{author in head/foot}%
+    %    % hier kommt der Ablauf hintergrund %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    %    A - B - C - D
+    %    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    %  \end{beamercolorbox}%
+    %  \begin{beamercolorbox}[wd=.2\paperwidth,ht=2.25ex,dp=1ex,right]{date in head/foot}%
+    %    %\usebeamerfont{date in head/foot}\insertshortdate{}\hspace*{2em}
+    %    \insertframenumber{} / \inserttotalframenumber\hspace*{2ex} 
+    %  \end{beamercolorbox}}%
+    %  \vskip0pt%
+    %}
+
+    \defbeamertemplate*{footline}{infolines theme}
+    { \leavevmode%
+      \hbox{%
+      \begin{beamercolorbox}[wd=.8\paperwidth,ht=2.25ex,dp=1ex,center]{author in head/foot}%
+        \insertsectionhead
+      \end{beamercolorbox}%
+      \begin{beamercolorbox}[wd=.2\paperwidth,ht=2.25ex,dp=1ex,right]{date in head/foot}%
+        %\usebeamerfont{date in head/foot}\insertshortdate{}\hspace*{2em}
+        \insertframenumber{} / \inserttotalframenumber\hspace*{2ex} 
+      \end{beamercolorbox}}%
+      \vskip0pt%
+    }   
+    
+    % % % %  Fortschrittsbalken ueber der Fusszeile
+    \definecolor{pbarcol}{RGB}{45,60,90}  %{0.7 0.7 0.7}
+    \makeatletter
+    \addtobeamertemplate{footline}{%
+      \color{pbarcol}         % to color the progressbar
+      \hspace*{-\beamer@leftmargin}%
+      \rule{\beamer@leftmargin}{2pt}%
+      \rlap{\rule{\dimexpr
+          \beamer@startpageofframe\dimexpr
+          \beamer@rightmargin+\textwidth\relax/\beamer@endpageofdocument}{1pt}}
+      % next 'empty' line is mandatory!
+    
+      \vspace{0\baselineskip}
+      {}
+    }
+
+% % % % Rand:
+    \setbeamersize{text margin left=5mm, text margin right=5mm} 
+    %\geometry{   paperwidth= vmargin=0pt,   head=5pt, %   headsep=0pt,%   foot=0.5cm % 
+    %    }
+    %\setbeamertemplate{frametitle}{
+    %    \vspace{-2cm}\\
+    %    \insertframetitle
+    %}
+
+
+
+
+

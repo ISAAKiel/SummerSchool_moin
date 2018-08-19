@@ -1,0 +1,260 @@
+%
+\ProvidesPackage{beamerthemeCAU2013b}
+
+
+\mode<presentation>
+
+\RequirePackage[scaled]{helvet}
+
+\let\cauxiii@theol\phantom
+\let\cauxiii@jura\phantom
+\let\cauxiii@med\phantom
+\let\cauxiii@phil\phantom
+\let\cauxiii@agrar\phantom
+\let\cauxiii@math\phantom
+\let\cauxiii@wiso\phantom
+\let\cauxiii@tf\phantom
+
+
+\logo{\includegraphics[height=1.2cm]{cau-sw.pdf}}
+\pgfdeclareimage[height=1.2cm]{logo}{cau-sw}
+\logo{\pgfuseimage{logo}}
+
+\definecolor{cau}{HTML}{8e217d}
+\definecolor{theol}{HTML}{552366}
+\definecolor{jura}{HTML}{d82a2F}
+\definecolor{med}{HTML}{a4c73b}
+\definecolor{phil}{HTML}{89b7e2}
+\definecolor{agrar}{HTML}{559243}
+\definecolor{math}{HTML}{F49420}
+\definecolor{wiso}{HTML}{005459}
+\definecolor{tf}{HTML}{33327F}
+
+\setbeamersize{text margin left=8pt}
+\setbeamersize{text margin right=32pt}
+
+\setbeamerfont{frametitle}{size=\normalsize, series=\bfseries}
+\setbeamercolor{frametitle}{parent=normal text}
+
+\setbeamercolor{title in head/foot}{bg=cau, fg=white}
+\setbeamerfont{title in head/foot}{size=\large, series=\bfseries}
+
+\setbeamercolor{author in head/foot}{parent=normal text}
+
+\setbeamerfont{author in head/foot}{size=\tiny}
+
+\setbeamercolor{date in head/foot}{parent=normal text}
+
+\setbeamerfont{date in head/foot}{size=\tiny}
+
+\setbeamercolor{palette primary}{fg=cau}
+\setbeamercolor{titlelike}{fg=cau}
+\setbeamercolor{part in toc}{fg=cau}
+\setbeamercolor{section in toc}{fg=black}
+\setbeamercolor{subsection in toc}{fg=black}
+\setbeamercolor{local structure}{fg=cau}
+
+\addtobeamertemplate{part page}{\vbox{}\vfil}{\vfil}
+\addtobeamertemplate{section page}{\vbox{}\vfil}{\vfil}
+
+%% took this from http://www.babs.gmxhome.de/da_ergeb.htm
+%% it should tell a screen reader the contents are not
+%% content-relevant (like page numbers)
+%\newenvironment{aIIypagefrills}{%
+%  \pdfliteral{/Artifact <</Type /Pagination>> BDC}%
+%}{%
+%  \pdfliteral{EMC}%
+%}
+
+\newenvironment{aIIypagefrills}{%
+  }
+
+\setbeamertemplate{headline}
+{
+  \leavevmode%
+  \begin{aIIypagefrills}%
+  \hbox{%
+  \begin{beamercolorbox}[
+      wd=0.7\paperwidth,
+      ht=0.070\paperwidth,
+      dp=0.005\paperwidth, left
+      ]{title in head/foot}%
+     \vspace*{1em}
+    \usebeamerfont{title in head/foot}\hspace{\beamer@leftmargin}\cauxiii@insertslidetitle\\
+  \end{beamercolorbox}%
+  
+    \begin{beamercolorbox}[
+        wd=0.3\paperwidth,
+        ht=0.070\paperwidth,
+        dp=0.005\paperwidth, right
+        ]{title in head/foot}%
+      \hbox{}\hfill\insertlogo\hspace{6pt}\\%
+    \end{beamercolorbox}%
+  }%
+  \end{aIIypagefrills}%
+  \vskip0pt%
+}
+
+\setbeamertemplate{footline}
+{%
+  \leavevmode%
+  \begin{aIIypagefrills}%
+  \hbox{%
+  \begin{beamercolorbox}[wd=.666666\paperwidth,ht=2.25ex,dp=1ex,left]{author in head/foot}%
+    \hspace*{\beamer@leftmargin} 
+    \usebeamerfont{author in head/foot}\insertshortauthor
+    \expandafter\beamer@ifempty\expandafter{\beamer@shortinstitute}{}{~~(\insertshortinstitute)}{~~--~~\insertsectionhead~~~~}
+  \end{beamercolorbox}%
+  \begin{beamercolorbox}[
+      wd=.333333\paperwidth,
+      ht=2.25ex,
+      dp=1ex,
+      right]{date in head/foot}%
+    \usebeamerfont{date in head/foot}\insertshortdate{}\hspace*{\beamer@leftmargin}%
+    \insertframenumber{} / \inserttotalframenumber\hspace*{\beamer@leftmargin}%
+  \end{beamercolorbox}}%
+  \end{aIIypagefrills}%
+  \vskip0pt%
+}
+\setbeamertemplate{navigation symbols}{}
+
+\setbeamertemplate{sidebar right}
+{%
+\vfill
+\llap{\cauxiii@theol{\textcolor{theol}{\rule{18.75pt}{7.5bp}}}}
+\vspace*{11.75pt}
+\llap{\cauxiii@jura{\textcolor{jura}{\rule{18.75pt}{7.5bp}}}}
+\vspace*{11.75pt}
+\llap{\cauxiii@med{\textcolor{med}{\rule{18.75pt}{7.5bp}}}}
+\vspace*{11.75pt}
+\llap{\cauxiii@phil{\textcolor{phil}{\rule{18.75pt}{7.5bp}}}}
+\vspace*{11.75pt}
+\llap{\cauxiii@agrar{\textcolor{agrar}{\rule{18.75pt}{7.5bp}}}}
+\vspace*{11.75pt}
+\llap{\cauxiii@math{\textcolor{math}{\rule{18.75pt}{7.5bp}}}}
+\vspace*{11.75pt}
+\llap{\cauxiii@wiso{\textcolor{wiso}{\rule{18.75pt}{7.5bp}}}}
+\vspace*{11.75pt}
+\llap{\cauxiii@tf{\textcolor{tf}{\rule{18.75pt}{7.5bp}}}}
+\vspace*{11.75pt}
+}
+
+
+\def\cauxiii@slidetitle@title{\inserttitle}
+\def\cauxiii@slidetitle@part{%
+  \ifx\insertpart\@empty\cauxiii@slidetitle@title
+  \else\insertshortpart\fi
+}
+\def\cauxiii@slidetitle@section{%
+  \ifx\insertsection\@empty\cauxiii@slidetitle@part
+  \else\insertsectionhead\fi
+}
+\def\cauxiii@slidetitle@subsection{%
+  \ifx\insertsubsection\@empty\cauxiii@slidetitle@section
+  \else\insertsubsectionhead\fi
+}
+\DeclareOptionBeamer{slidetitle}[1]{%
+  \expandafter\let
+  \expandafter\cauxiii@insertslidetitle
+              \csname cauxiii@slidetitle@#1\endcsname
+}
+\let\cauxiii@insertslidetitle\cauxiii@slidetitle@title
+
+
+\def\cauxiii@scheme#1{%
+  \expandafter\let\csname cauxiii@#1\endcsname\@firstofone
+  \setbeamercolor{title in head/foot}{bg=#1}%
+  \setbeamercolor{author in head/foot}{bg=#1}%
+  \setbeamercolor{date in head/foot}{bg=#1}
+}
+
+\DeclareOptionBeamer{theol}{%
+  \cauxiii@scheme{theol}
+}
+\DeclareOptionBeamer{jura}{%
+  \cauxiii@scheme{jura}
+}
+\DeclareOptionBeamer{med}{%
+  \cauxiii@scheme{med}
+}
+\DeclareOptionBeamer{phil}{%
+  \cauxiii@scheme{phil}
+}
+\DeclareOptionBeamer{agrar}{%
+  \cauxiii@scheme{agrar}
+}
+\DeclareOptionBeamer{math}{%
+  \cauxiii@scheme{math}
+}
+\DeclareOptionBeamer{wiso}{%
+  \cauxiii@scheme{wiso}
+}
+\DeclareOptionBeamer{tf}{%
+  \cauxiii@scheme{tf}%
+}
+\DeclareOptionBeamer{cau}{%
+  \let\cauxiii@theol\@firstofone
+  \let\cauxiii@jura\@firstofone
+  \let\cauxiii@phil\@firstofone
+  \let\cauxiii@wiso\@firstofone
+  \let\cauxiii@agrar\@firstofone
+  \let\cauxiii@tf\@firstofone
+  \let\cauxiii@med\@firstofone
+  \let\cauxiii@math\@firstofone
+  \setbeamercolor{title in head/foot}{bg=cau}
+}
+\ProcessOptionsBeamer
+
+
+% % % % Inhaltsverzeichnis Helligkeit
+\setbeamertemplate{section in toc shaded}[default][80]
+
+% % % % Block
+    \setbeamertemplate{blocks}[rounded][shadow=false] 
+    %\setbeamertemplate{blocks}[rounded][shadow=true] 
+
+% % % %  Item
+%\setbeamertemplate{items}[circle] 
+%\setbeamertemplate{items}[triangles] 
+
+% % % % Splaten
+    \setlength{\columnsep}{0.5cm}       % Abstand zwischen den Spalten
+
+% % % % Farben
+%% Faben allgemein
+    %\definecolor{papier}{RGB}{237,227,117}
+    %\definecolor{papier}{RGB}{231,211,177}
+    \definecolor{papier}{RGB}{236,224,176}
+    \definecolor{krot}{RGB}{229,20,60}
+    \definecolor{hellblau}{RGB}{110,130,160}
+    \definecolor{dunkelblau}{RGB}{45,60,90}
+    \definecolor{grau100}{RGB}{100,100,100}
+    \definecolor{grau120}{RGB}{120,120,120}
+    \definecolor{grau130}{RGB}{140,140,140}
+    \definecolor{grau140}{RGB}{140,140,140}
+    \definecolor{grau150}{RGB}{140,140,140}
+    \definecolor{grau160}{RGB}{160,160,160}
+    \definecolor{grau170}{RGB}{170,170,170}
+    \definecolor{grau180}{RGB}{180,180,180}
+    \definecolor{grau200}{RGB}{200,200,200}
+
+
+    % % % %  Fortschrittsbalken ueber der Fusszeile
+    \definecolor{pbarcol}{RGB}{45,60,90}  %{0.7 0.7 0.7}
+    \makeatletter
+    \addtobeamertemplate{footline}{%
+        \color{pbarcol}         % to color the progressbar
+        \hspace*{-\beamer@leftmargin}%
+        \rule{\beamer@leftmargin}{2pt}%
+        \rlap{\rule{\dimexpr
+                \beamer@startpageofframe\dimexpr
+                \beamer@rightmargin+\textwidth\relax/\beamer@endpageofdocument}{1pt}}
+        % next 'empty' line is mandatory!
+        
+        \vspace{0\baselineskip}
+        {}
+    }
+    
+    
+    \mode
+    <all>
