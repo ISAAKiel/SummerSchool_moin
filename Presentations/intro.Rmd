@@ -50,6 +50,34 @@ Task: develop a R-package for intraction modelling.
 
 </div>
 
+# Who
+
+- Institutions:
+    - [ISAAK](https://isaakiel.github.io)
+    - [CRC 1266](http://www.sfb1266.uni-kiel.de/de/sfb-1266-transformationsdimensionen)  Scales of Transformation - Human-Environmental Interaction in Prehistoric and Archaic Societies
+    - [A2: Integrative Modelling of Socio-Environmental System Dynamics](http://www.sfb1266.uni-kiel.de/en/projects/cluster-a-theory-and-modelling/a2-intergrative-modelling)
+
+- Organizers
+    - Daniel Knitter, Kiel
+    - Martin Hinz, Kiel/Bern
+    - Oliver Nakoinz, Kiel
+- Guest Lecturers: (funded by [IC](https://www.international.uni-kiel.de/en?set_language=en))
+    - Ray Rivers,  London
+    - Clara Filet,  Paris
+    - Francesco Carrer, Newcastle
+- Participants:
+    - Joe Roe, Copenhagen  
+    - Benedikt Grammer, Wien      
+    - Kai Radloff,  Berlin
+    - Georg Roth,  Berlin   
+    - Juliane Watson (Bonneß), Berlin
+    - Chiara Girotto, Frankfurt
+    - Carolin Tietze, Kiel/Köln
+    - Hendrik Raese, Kiel 
+    - Michael Bilger, Kiel
+    - Franziska Faupel, Kiel
+    - Sandra Soederlind, Kiel GSHDL
+    - Loren Covin, Kiel GSHDL
 
 # Program
 
@@ -91,9 +119,20 @@ Task: develop a R-package for intraction modelling.
     - 15:00-16:00 Discussion: Evaluation and Further steps 
     - 16:00 Farewell
 
-# Organisation
+# Organisation: Subtasks / Working Groups
 
-Subtasks / Working Groups
+- Modelling approaches
+    - dist and k-Nachbarn
+    - gravity
+    - Entropy
+    - hamiltonian
+    - cultural distances
+- Data input and preparation
+- Output
+- Packing and testing
 
-- xxxx
-
+- Consider:
+    - methodological competence in each group
+    - R and programming competence in each group
+    - others in each group
+    - Assign responsibilities for sub-tasks and sub-sub-tasks
