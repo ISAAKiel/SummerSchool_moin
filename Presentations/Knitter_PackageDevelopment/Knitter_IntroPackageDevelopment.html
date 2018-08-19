@@ -130,7 +130,7 @@ devtools::create(path = "./moin")
 
 
 ```
-## Creating package 'moin' in '/home/daniel/ISAAK/2018_SummerSchool_moin/Presentations'
+## Creating package 'moin' in '/home/daniel/ISAAK/SummerSchool_moin/Presentations/Knitter_PackageDevelopment'
 ```
 
 ```
@@ -325,7 +325,7 @@ Now, let's add the documentation using `roxygen` comments `#'`
 ##' @title hello_function
 ##' @param name a name
 ##' @return a greeting
-##' @example hello_function(name = "World")
+##' @examples hello_function(name = "World")
 ##' @export
 hello_function &lt;- function(name) {
   print(paste0("Hello, ", name, "!"))
@@ -353,10 +353,11 @@ devtools::document(pkg = "./moin") #  calls roxygen2::roxygenise() to do the har
 ```
 
 ```
-## Updating roxygen version in /home/daniel/ISAAK/2018_SummerSchool_moin/Presentations/moin/DESCRIPTION
+## Updating roxygen version in /home/daniel/ISAAK/SummerSchool_moin/Presentations/Knitter_PackageDevelopment/moin/DESCRIPTION
 ```
 
 ```
+## Writing NAMESPACE
 ## Writing NAMESPACE
 ## Writing hello_function.Rd
 ```
@@ -390,7 +391,7 @@ devtools::install(pkg = "./moin") #  calls roxygen2::roxygenise() to do the hard
 ```
 ## '/usr/lib64/R/bin/R' --no-site-file --no-environ --no-save --no-restore  \
 ##   --quiet CMD INSTALL  \
-##   '/home/daniel/ISAAK/2018_SummerSchool_moin/Presentations/moin'  \
+##   '/home/daniel/ISAAK/SummerSchool_moin/Presentations/Knitter_PackageDevelopment/moin'  \
 ##   --library='/home/daniel/R/x86_64-pc-linux-gnu-library/3.5'  \
 ##   --install-tests
 ```
@@ -401,17 +402,6 @@ devtools::install(pkg = "./moin") #  calls roxygen2::roxygenise() to do the hard
 
 ```
 ## Reloading installed moin
-```
-
-```
-## 
-## Attaching package: 'moin'
-```
-
-```
-## The following object is masked _by_ '.GlobalEnv':
-## 
-##     hello_function
 ```
 
 - `devtools::install`: Uses `R CMD INSTALL` to install the package.  Will also try to install dependencies of the package from CRAN, if they’re not already installed

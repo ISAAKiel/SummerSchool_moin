@@ -253,7 +253,7 @@ Now, let's add the documentation using `roxygen` comments `#'`
 ##' @title hello_function
 ##' @param name a name
 ##' @return a greeting
-##' @example hello_function(name = "World")
+##' @examples hello_function(name = "World")
 ##' @export
 hello_function <- function(name) {
   print(paste0("Hello, ", name, "!"))
@@ -267,6 +267,7 @@ writeLines(c("##' room for the DESCRIPTION
 ##' @title hello_function
 ##' @param name a name##' 
 ##' @return a greeting
+##' @examples hello_function(name = 'World')
 ##' @export
 hello_function <- function(name) {
   print(paste0('Hello, ', name, '!'))
