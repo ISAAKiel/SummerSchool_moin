@@ -10,5 +10,6 @@
 |  8 | Joe Roe                 | jwg983@hum.ku.dk              | UCL & Copenhagen University                                                 |                                      |
 |  9 | Juliane Watson (Bonneß) | juliane.bonness@dainst.de     | Deutsches Archäologisches Institut, IT                                      |                                      |
 | 10 | Franziska Faupel        | franziska-faupel@gmx.de       | CAU Kiel, Institute of Prehistoric and Protohistoric Archaeology            |                                      |
+| 11 | Sandra Soederlind       | ssoederlind@gshdl.uni-kiel.de | Graduate School Human Development in Landscapes                             |                                      |
 |----+-------------------------+-------------------------------+-----------------------------------------------------------------------------+--------------------------------------|
 |  x | Martin Riesenberg       | martin.riesenberg@yahoo.de    | Freie Universität Berlin, Prehistoric Institute                             | potentially conflicting appointment; |
