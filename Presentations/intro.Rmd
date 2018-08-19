@@ -50,7 +50,23 @@ Task: develop a R-package for intraction modelling.
 
 </div>
 
-# Who
+# Summer School Series
+
+- Summer School **'Modelling human Behaviour in Landscapes'**, PD Dr. Oliver Nakoinz, Graduiertenschule 'Human Development in Landscapes', CAU Kiel, Kiel 2013. [link1](http://www.gshdl.uni-kiel.de/news/modelling-summer-school-kickoff/) [link2](http://www.gshdl.uni-kiel.de/news/modelling-summer-school-resume/)
+    - Nakoinz, Oliver and Knitter, Daniel (2016). [Modelling Human Behaviour in Landscapes - Basic concepts and modelling elements](http://www.springer.com/de/book/9783319295367). Quantitative Archaeology and Archaeological Modelling 1 (New York 2016).
+
+- Winter School **'Modelling human Behaviour in Landscapes'**, Daniel Knitter (Berlin), PD Dr. Oliver Nakoinz (Kiel), Exzellenzcluster TOPOI, FU Berlin and Graduate School 'Human Development in Landscapes', CAU Kiel, Berlin 2014.
+
+- Summer School **'MOSAIC: Modelling spheres of interaction'**, Franziska Faupel (Kiel), PD Dr. Oliver Nakoinz (Kiel), Dr. Daniel Knitter (Berlin), funded by the Internationalisierungsfond of Kiel University, CAU Kiel, Kiel 2016. [link](https://www.ufg.uni-kiel.de/de/aktuelles/events/tagungen-ausstellungen/mosaic2016)
+
+- Summer School **'Reproducible Research in Landscape Archaeology'**, Dr. Daniel Knitter (Kiel) and Ricarda Braun (Berlin), Dr. Oliver Nakoinz (Kiel), Exzellenzcluster TOPOI, FU Berlin und  Graduiertenschule 'Human Development in Landscapes', CAU Kiel, funded by Exzellenzcluster TOPOI, Berlin 2017.
+
+- Summer School 'Summer School **MoIn**, Modelling Interaction', Dr. Daniel Knitter (Kiel), PD Dr. Oliver Nakoinz (Kiel), Dr. Martin Hinz (Kiel/Bern), CRC 1266, CAU Kiel, Kiel 2018 (Univis-Nr. 200136)
+
+- Écoles thématiques du CNRS **'Modelling spheres of Interactions: Networks in archaeological research (MOSAICnet)'**, Prof. Dr. Katherine Gruel (Paris), Prof. Dr. Patrice Brun (Paris), Clara Filet (Paris), Franziska Faupel (Kiel), PD Dr. Oliver Nakoinz (Kiel) and Dr. Catalin Popa (Leiden), Bibracte - Centre Archéologique Européen du Mont Beuvray 2018 [link](https://www.ufg.uni-kiel.de/de/aktuelles/events/tagungen-ausstellungen/mosaic2018)
+
+
+# Who?
 
 - Institutions:
     - [ISAAK](https://isaakiel.github.io)
