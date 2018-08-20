@@ -1,7 +1,7 @@
 ---
 title: "Introduction to Package Development in R"
 subtitle: "Summer School moin"
-author: "CRC1266 | A2 | Daniel Knitter"
+author: "CRC1266 | A2 | Daniel Knitter & Wolfgang Hamer"
 date: "2018-08-20"
 output:
   xaringan::moon_reader:
