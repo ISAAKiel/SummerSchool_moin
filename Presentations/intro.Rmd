@@ -138,13 +138,14 @@ Task: develop a R-package for intraction modelling.
 # Organisation: Subtasks / Working Groups
 
 - Modelling approaches
-    - dist and k-Nachbarn
-    - gravity
-    - Entropy
-    - hamiltonian
-    - cultural distances
-- Data input and preparation
-- Output
+    - Distance and k-neighbors
+    - Gravity models
+    - Entropy models (lecture Clara Filet)
+    - Hamiltonian models (lecture Ray Rivers)
+    - Cultural distance models (lecture Oliver Nakoinz)
+- Data crunching
+    - Data input and preparation
+	- Output
 - Packing and testing
 
 - Consider:
@@ -152,3 +153,4 @@ Task: develop a R-package for intraction modelling.
     - R and programming competence in each group
     - others in each group
     - Assign responsibilities for sub-tasks and sub-sub-tasks
+
