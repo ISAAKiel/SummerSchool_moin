@@ -139,8 +139,7 @@ Task: develop a R-package for intraction modelling.
 
 - Modelling approaches
     - Distance and k-neighbors
-    - Gravity models
-    - Entropy models (lecture Clara Filet)
+    - Gravity models and entropy models (lecture Clara Filet)
     - Hamiltonian models (lecture Ray Rivers)
     - Cultural distance models (lecture Oliver Nakoinz)
 - Data crunching
