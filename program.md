@@ -5,10 +5,11 @@
     - 10:00-10:30 Introduction of the participants, defining working groups
     - 10:30-12:30 Lecture: Daniel Knitter, Introduction to package development with R
     - 12:30-13:30 Lunch
-    - 13:30-16:00 Coding in groups
+    - 13:30-14:30 Lecture: Ray Rivers, Modelling Spatial Exchange. I
+    - 14:30-16:00 Coding in groups
     - 16:00-17:00 Report of the working groups and discussion
 - Tuesday, August 21
-    - 09:00-10:30 Lecture: Ray Rivers, Trip Distribution Models 
+    - 09:00-10:30 Lecture: Ray Rivers, Modelling Spatial Exchange. II 
     - 10:30-12:00 Lecture: Clara Filet, Archaeology of Trip Distribution Models
     - 12:00-13:30 Lunch
     - 13:30-16:00 Coding in groups
