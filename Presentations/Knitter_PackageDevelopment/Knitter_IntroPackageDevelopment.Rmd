@@ -2,7 +2,7 @@
 title: "Introduction to Package Development in R"
 subtitle: "Summer School moin"
 author: "CRC1266 | A2 | Daniel Knitter"
-date: "2018-08-21"
+date: "2018-08-20"
 output:
   xaringan::moon_reader:
     css: ["default","moin.css","moin_fonts.css"]
